@@ -1,34 +1,27 @@
 package com.prudente.gamelist.dto;
 
 import com.prudente.gamelist.entities.GameList;
-import org.springframework.beans.BeanUtils;
 
 public class GameListDTO {
 
     private Long id;
     private String name;
 
-    public GameListDTO(){
-
+    public GameListDTO() {
     }
 
     public GameListDTO(GameList gameList) {
-        BeanUtils.copyProperties(gameList, this);
+        id = gameList.getId();
+        name = gameList.getName();
     }
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 }

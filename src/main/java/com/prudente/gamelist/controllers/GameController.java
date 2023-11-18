@@ -20,6 +20,7 @@ public class GameController {
     @Autowired
     private GameService gameService;
 
+
     @GetMapping
     public List<GameMinDTO> findAll(){
         return gameService.findAll();
@@ -29,4 +30,5 @@ public class GameController {
     public GameDTO findById(@PathVariable Long id){
         return gameService.findById(id);
     }
+
 }
